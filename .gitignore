@@ -1,0 +1,10 @@
+# DSStore
+*.DS_Store
+
+# Build files
+Build/*
+Binaries/*
+DerivedDataCache/*
+Intermediate/*
+Saved/*
+
