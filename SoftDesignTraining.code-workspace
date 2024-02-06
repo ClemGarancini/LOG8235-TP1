@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "SoftDesignTraining",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "SoftDesignTraining Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"Mac",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Test",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTraining IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTraining IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTraining",
+					"IOS",
+					"Shipping",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTrainingEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Debug",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTrainingEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SoftDesignTrainingEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SoftDesignTrainingEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SoftDesignTrainingEditor",
+					"Mac",
+					"Development",
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch SoftDesignTraining (Debug)",
+				"request": "launch",
+				"program": "/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "SoftDesignTraining Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTraining (DebugGame)",
+				"request": "launch",
+				"program": "/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "SoftDesignTraining Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTraining (Development)",
+				"request": "launch",
+				"program": "/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "SoftDesignTraining Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTraining (Test)",
+				"request": "launch",
+				"program": "/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "SoftDesignTraining Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTraining (Shipping)",
+				"request": "launch",
+				"program": "/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "SoftDesignTraining Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTrainingEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "SoftDesignTrainingEditor Mac Debug Build",
+				"args": [
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTrainingEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "SoftDesignTrainingEditor Mac DebugGame Build",
+				"args": [
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SoftDesignTrainingEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "SoftDesignTrainingEditor Mac Development Build",
+				"args": [
+					"/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/clement/Documents/PolyMontreal/JV/TP/TP1 5.3/SoftDesignTraining.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
